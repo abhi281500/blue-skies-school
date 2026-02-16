@@ -11,7 +11,7 @@ export default function ChairmanPage() {
         <div className="w-full md:w-5/12">
           <div className="relative h-[400px] md:h-[500px] rounded-2xl overflow-hidden shadow-2xl border-4 border-blue-100">
             <Image 
-              src="/images/gallery/Chairman.png" // File name check kar lena
+              src="/images/gallery/chairman.png" // File name check kar lena
               alt="Er. Sohit Raj - Chairman"
               fill
               className="object-cover"
