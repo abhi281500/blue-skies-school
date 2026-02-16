@@ -1,6 +1,7 @@
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import ChatBot from "@/components/ChatBot";
 
 export const metadata = {
   title: "Blue Skies School | CBSE School in East Champaran",
@@ -33,6 +34,7 @@ export default function RootLayout({
 </main>
 
         <Footer />
+        <ChatBot/>
       </body>
     </html>
   );
