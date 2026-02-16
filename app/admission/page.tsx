@@ -29,7 +29,7 @@ export default function AdmissionPage() {
       return;
     }
 
-    const whatsappNumber = "918448606683"; // school number
+    const whatsappNumber = "918882165021"; // school number
 
     const text = `
 Admission Enquiry:

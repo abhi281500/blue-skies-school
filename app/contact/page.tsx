@@ -35,7 +35,7 @@ export default function ContactPage() {
               rel="noopener noreferrer"
               className="text-blue-600 underline cursor-pointer"
             >
-              blue_skies@gmail.com
+              schoolblueskies@gmail.com
             </a>
           </p>
 
