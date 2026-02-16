@@ -1,18 +1,100 @@
+"use client";
+
+import { useState } from "react";
 import Link from "next/link";
 
 export default function Navbar() {
+  const [aboutOpen, setAboutOpen] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
+
   return (
-    <nav className="bg-blue-600 text-white px-8 py-4 flex justify-between">
+    <header className="bg-blue-700 shadow sticky top-0 z-50 text-white">
+      <div className="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
+        {/* Logo */}
+        <Link href="/" className="text-xl font-bold text-white hover:text-blue-100">
+          Blue Skies School
+        </Link>
 
-      <h1 className="text-xl font-bold">Blue Skies School</h1>
+        {/* Mobile Menu Button */}
+        <button
+          className="md:hidden text-2xl text-white focus:outline-none"
+          onClick={() => setMenuOpen(!menuOpen)}
+        >
+          {menuOpen ? "✕" : "☰"}
+        </button>
 
-      <div className="flex gap-6 text-sm font-medium">
-        <Link href="/" className="hover:underline">Home</Link>
-        <Link href="/about" className="hover:underline">About</Link>
-        <Link href="/admission" className="hover:underline">Admission</Link>
-        <Link href="/gallery" className="hover:underline">Gallery</Link>
-        <Link href="/contact" className="hover:underline">Contact</Link>
+        {/* Menu */}
+        <nav
+          className={`${
+            menuOpen ? "block" : "hidden"
+          } md:flex absolute md:static top-full left-0 w-full md:w-auto bg-blue-700 md:bg-transparent shadow-lg md:shadow-none`}
+        >
+          <ul className="flex flex-col md:flex-row md:items-center gap-4 md:gap-8 p-6 md:p-0">
+            <li>
+              <Link href="/" className="hover:text-blue-200 transition-colors" onClick={() => setMenuOpen(false)}>
+                Home
+              </Link>
+            </li>
+
+            {/* ABOUT DROPDOWN */}
+            <li className="relative">
+              <button
+                onClick={() => setAboutOpen(!aboutOpen)}
+                className="flex items-center gap-1 hover:text-blue-200 focus:outline-none transition-colors"
+              >
+                About
+                <span className={`text-[10px] transition-transform duration-200 ${aboutOpen ? "rotate-180" : ""}`}>
+                  ▼
+                </span>
+              </button>
+
+              {aboutOpen && (
+                <ul className="md:absolute bg-white border border-gray-100 shadow-2xl rounded-lg mt-2 w-60 py-2 z-[60]">
+                  {/* Yahan text-gray-800 add kiya hai taaki white background par dikhe */}
+                  {[
+                    { name: "Our School", href: "/about/our-school" },
+                    { name: "Vision & Mission", href: "/about/vision-mission" },
+                    { name: "Principal’s Message", href: "/about/principal-message" },
+                    { name: "Management", href: "/about/management" },
+                    { name: "Mandatory Disclosure", href: "/about/mandatory-disclosure" },
+                  ].map((item) => (
+                    <li key={item.href}>
+                      <Link
+                        href={item.href}
+                        className="block px-4 py-2 text-gray-800 hover:bg-blue-50 hover:text-blue-700 transition-colors"
+                        onClick={() => {
+                          setAboutOpen(false);
+                          setMenuOpen(false);
+                        }}
+                      >
+                        {item.name}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              )}
+            </li>
+
+            <li>
+              <Link href="/admission" className="hover:text-blue-200 transition-colors" onClick={() => setMenuOpen(false)}>
+                Admission
+              </Link>
+            </li>
+
+            <li>
+              <Link href="/gallery" className="hover:text-blue-200 transition-colors" onClick={() => setMenuOpen(false)}>
+                Gallery
+              </Link>
+            </li>
+
+            <li>
+              <Link href="/contact" className="hover:text-blue-200 transition-colors" onClick={() => setMenuOpen(false)}>
+                Contact
+              </Link>
+            </li>
+          </ul>
+        </nav>
       </div>
-    </nav>
+    </header>
   );
 }
