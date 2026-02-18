@@ -1,8 +1,14 @@
-export const metadata = {
-  title: "Vision & Mission | Blue Skies School",
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Vision & Mission | Blue Skies School East Champaran",
   description:
-    "Vision and Mission of Blue Skies School, East Champaran – committed to quality education and holistic development.",
+    "Vision and Mission of Blue Skies School, East Champaran ,Pipra ,Motihari– committed to quality CBSE education and holistic development.",
+  alternates: {
+    canonical: "https://www.blueskiesschool.in/vision-mission",
+  },
 };
+
 
 export default function VisionMissionPage() {
   return (
@@ -27,6 +33,34 @@ export default function VisionMissionPage() {
           <li>Maintain strong parent-teacher collaboration</li>
         </ul>
       </div>
+
+    <script
+  type="application/ld+json"
+  dangerouslySetInnerHTML={{
+    __html: JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "School",
+      name: "Blue Skies School",
+      url: "https://www.blueskiesschool.in/vision-mission",
+      description:
+        "Vision and Mission of Blue Skies School, a CBSE curriculum school in East Champaran focused on holistic development.",
+      address: {
+        "@type": "PostalAddress",
+        streetAddress: "Pipra Purani Chowk (College Road)",
+        addressLocality: "East Champaran",
+        addressRegion: "Bihar",
+        postalCode: "845416",
+        addressCountry: "IN",
+      },
+      areaServed: "East Champaran",
+    }),
+  }}
+/>
+
+
+
+
+
     </div>
   );
 }

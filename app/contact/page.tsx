@@ -1,7 +1,22 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Contact Blue Skies School | CBSE School in East Champaran",
+  description:
+    "Contact Blue Skies School, a CBSE curriculum school near Pipra Purani Chowk, East Champaran. Call for admissions and enquiries.",
+  alternates: {
+    canonical: "https://www.blueskiesschool.in/contact",
+  },
+};
+
+
+
 export default function ContactPage() {
   return (
     <div className="max-w-4xl mx-auto mt-10 px-4">
-      <h1 className="text-3xl font-bold mb-6">Contact Us</h1>
+      <h1 className="text-3xl font-bold mb-6">
+        Blue Skies School 
+      </h1>
 
       <div className="grid md:grid-cols-2 gap-8">
         {/* Contact Info */}
@@ -36,7 +51,6 @@ export default function ContactPage() {
           <p className="text-sm text-gray-600 mt-2">
             📍 <strong>Nearby Landmark:</strong> Manokamna Library (School is just opposite)
           </p>
-
         </div>
 
         {/* Google Map */}
@@ -49,10 +63,37 @@ export default function ContactPage() {
             allowFullScreen
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"
-          ></iframe>
+          />
         </div>
-
       </div>
+
+      {/* 🔥 LOCAL BUSINESS / SCHOOL SCHEMA (VERY IMPORTANT) */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "School",
+            name: "Blue Skies School",
+            url: "https://www.blueskiesschool.in",
+            address: {
+              "@type": "PostalAddress",
+              streetAddress: "Pipra Purani Chowk (College Road)",
+              addressLocality: "East Champaran",
+              addressRegion: "Bihar",
+              postalCode: "845416",
+              addressCountry: "IN",
+            },
+            telephone: ["+91-8882165021", "+91-8448606683"],
+            email: "schoolblueskies@gmail.com",
+            areaServed: "East Champaran",
+            sameAs: [
+              "https://www.google.com/maps/place/MANOKAMNA+LIBRARY",
+            ],
+          }),
+        }}
+      />
     </div>
   );
 }
+

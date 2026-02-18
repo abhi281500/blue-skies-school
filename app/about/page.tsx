@@ -1,8 +1,14 @@
-export const metadata = {
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
   title: "About Blue Skies School | CBSE School in East Champaran",
   description:
     "Blue Skies School is a CBSE curriculum school in East Champaran offering quality education from Nursery to Class VIII in a safe and disciplined environment.",
+  alternates: {
+    canonical: "https://www.blueskiesschool.in/about",
+  },
 };
+
 
 export default function AboutPage() {
   return (

@@ -8,17 +8,38 @@ export const metadata: Metadata = {
   title: "Blue Skies School | CBSE School in East Champaran",
   description:
     "Blue Skies School is a CBSE curriculum school in East Champaran offering quality education from Nursery to Class VIII. Admissions Open 2026–27.",
-  verification: {
-    google: "WijdLBAPpZhg8MHt-IiJYZQD91QcaQpm1l_TjF9IM8c",
-  },
+
   keywords: [
     "Blue Skies School",
     "CBSE School in East Champaran",
     "Best School in Motihari",
     "School Near Pipra Purani Chowk",
     "Primary School East Champaran",
+    "Blue Skies School Pipra Motihari",
+    "Blue Skies School English Medium Pipra",
+    "Best school in Pipra Motihari"
+
   ],
+
+  verification: {
+    google: "WijdLBAPpZhg8MHt-IiJYZQD91QcaQpm1l_TjF9IM8c",
+  },
+
+  alternates: {
+    canonical: "https://www.blueskiesschool.in/",
+  },
+
+  openGraph: {
+    title: "Blue Skies School | CBSE School in East Champaran",
+    description:
+      "CBSE affiliated school in East Champaran offering quality education from Nursery to Class VIII.",
+    url: "https://www.blueskiesschool.in/",
+    siteName: "Blue Skies School",
+    locale: "en_IN",
+    type: "website",
+  },
 };
+
 
 export default function RootLayout({
   children,

@@ -12,7 +12,7 @@ export default function Hero() {
             <div className="relative w-[200px] h-[280px] md:w-[260px] md:h-[360px]">
               <Image
                 src="/images/gallery/student-girl-1.jpg.png"
-                alt="Blue Skies School Student Girl"
+                alt=" Student of Blue Skies School "
                 fill
                 className="rounded-xl shadow-lg object-cover"
                 priority
@@ -29,6 +29,7 @@ export default function Hero() {
             <h1 className="text-3xl md:text-5xl font-bold text-blue-700 mb-4">
               Blue Skies School
             </h1>
+
 
             <p className="text-base md:text-xl text-gray-700 mb-2 font-medium">
               CBSE Curriculum • Nursery to Class VIII

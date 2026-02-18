@@ -1,25 +1,31 @@
 import { MetadataRoute } from "next";
 
 export default function sitemap(): MetadataRoute.Sitemap {
+  const baseUrl = "https://www.blueskiesschool.in";
+
   return [
     {
-      url: "https://blue-skies-school.vercel.app/",
+      url: `${baseUrl}/`,
       lastModified: new Date(),
     },
     {
-      url: "https://blue-skies-school.vercel.app/about",
+      url: `${baseUrl}/about`,
       lastModified: new Date(),
     },
     {
-      url: "https://blue-skies-school.vercel.app/admission",
+      url: `${baseUrl}/our-school`,
       lastModified: new Date(),
     },
     {
-      url: "https://blue-skies-school.vercel.app/gallery",
+      url: `${baseUrl}/vision-mission`,
       lastModified: new Date(),
     },
     {
-      url: "https://blue-skies-school.vercel.app/contact",
+      url: `${baseUrl}/admissions`,
+      lastModified: new Date(),
+    },
+    {
+      url: `${baseUrl}/contact`,
       lastModified: new Date(),
     },
   ];
