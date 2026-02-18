@@ -11,7 +11,7 @@ export default function DirectorPage() {
         <div className="w-full md:w-5/12">
           <div className="relative h-[400px] md:h-[500px] rounded-2xl overflow-hidden shadow-2xl border-4 border-green-100">
             <Image 
-              src="/images/gallery/Director.png" // File name check kar lena
+              src="/images/gallery/director.png" // File name check kar lena
               alt="Umakant Yadav - Director"
               fill
               className="object-cover"
