@@ -7,7 +7,7 @@ export const metadata = {
 
 const managers = [
   {
-    name: "Naytik Nayan",
+    name: "Er. Naytik Nayan",
     title: "Admissions & Outreach Manager",
     image: "/images/gallery/Marketing.png",
   },
